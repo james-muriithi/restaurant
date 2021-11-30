@@ -14,7 +14,8 @@ $(function() {
             const date = $('#date').val();
 
             const message = `Your space has been reserved for ${noOfPeople} people on ${date}`;
-            alert(message);
+            toastr.success(message, 'Reservation Successful');
+
         }
 
 
@@ -40,7 +41,9 @@ function removeFormErrors(form) {
     const formInputs = form.find('input');
 
     formInputs.on('keydown', function() {
-        $(this).removeClass('is-invalid');
+        if ($(this).hasClass("is-invalid")) {
+            $(this).removeClass("is-invalid");
+        }
     })
 }
 
