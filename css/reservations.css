@@ -1,0 +1,56 @@
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 10px;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer i {
+    font-size: 30px;
+    color: #000;
+}
+
+footer {
+    text-align: center;
+}
+
+#copyright {
+    color: gray;
+    font-size: 15px;
+}
+
+
+/* reservations styles */
+
+body,
+html {
+    height: 100%;
+}
+
+#reservations {
+    min-height: 90%;
+}
