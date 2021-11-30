@@ -11,10 +11,15 @@ $(function() {
 
         if (validateForm($(this))) {
             const noOfPeople = $('#chairs').val();
+            const fullName = $('#full_name').val();
+            const email = $('#email').val();
             let reserveDate = moment(new Date($('#date').val())).format("dddd, MMMM Do YYYY, HH:mm");
 
             const message = `Your space has been reserved for ${noOfPeople} people on ${reserveDate}`;
             toastr.success(message, 'Reservation Successful');
+            const emailMessage = `Hello ${fullName},\r\nYour space has been reserved for ${noOfPeople} people on ${reserveDate}.\r\nThank your for dining with us.`
+
+            sendEmail(email, emailMessage);
 
             $(this)[0].reset();
 
@@ -47,6 +52,39 @@ function removeFormErrors(form) {
             $(this).removeClass("is-invalid");
         }
     })
+}
+
+function sendEmail(email, message) {
+    const endpointUrl = "https://app.indexfand.com/api/SendEmail/";
+    // const message = "hello there";
+    // const email = "muriithijames556@gmail.com";
+    const subject = "Successful Reservation";
+    const from = "Buddies Restaurant";
+
+    fetch(endpointUrl, {
+            body: JSON.stringify({ message, to: email, from, subject }),
+            method: 'POST',
+            mode: "no-cors",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(res => console.log(res))
+        .catch(err => console.log(err))
+}
+
+function sendSms() {
+    const endpointUrl = "https://app.indexfand.com/api/SendSms/";
+    const message = "hello there";
+    const phone = "254746792699";
+    fetch(endpointUrl, {
+            body: JSON.stringify({ message, phone }),
+            method: 'POST',
+            mode: "no-cors",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(res => console.log(res))
+        .catch(err => console.log(err))
 }
 
 removeFormErrors($('.reservation-form'));
