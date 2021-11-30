@@ -1,20 +1,22 @@
 $(function() {
 
     // set min value of date to now
-    var d = new Date();
-    var m = moment(d).format();
+    const date = new Date();
+    var mmoment = moment(date).format();
 
-    $('#date').attr('min', m.split("+")[0])
+    $('#date').attr('min', mmoment.split("+")[0])
 
     $('.reservation-form').on('submit', function(e) {
         e.preventDefault();
 
         if (validateForm($(this))) {
             const noOfPeople = $('#chairs').val();
-            const date = $('#date').val();
+            let reserveDate = moment(new Date($('#date').val())).format("dddd, MMMM Do YYYY, HH:mm");
 
-            const message = `Your space has been reserved for ${noOfPeople} people on ${date}`;
+            const message = `Your space has been reserved for ${noOfPeople} people on ${reserveDate}`;
             toastr.success(message, 'Reservation Successful');
+
+            $(this)[0].reset();
 
         }
 
