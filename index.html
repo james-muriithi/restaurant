@@ -47,6 +47,20 @@
     </div>
     <div class="container" id="menuItems">
          <i><h2>Menu</h2></i>
+         <a href="cart.html"><button class="btn btn-warning">See Cart <sup class="bg-danger text-light" id="allcarts">0</sup></button></a>
+         <script>
+            var Items = [];
+            Items[0] = localStorage.getItem("Item1");
+            Items[1] = localStorage.getItem("Item2");
+            Items[2] = localStorage.getItem("Item3");
+            Items[3] = localStorage.getItem("Item4");
+            Items[4] = localStorage.getItem("Item5");
+            Items[5] = localStorage.getItem("Item6");
+            Items[6] = localStorage.getItem("Item7");
+            Items[7] = localStorage.getItem("Item8");
+            var NewItems = Items.filter((a) => a);
+            document.getElementById("allcarts").innerHTML = NewItems.length;
+         </script>
          <div class="rows">
              <div class="card">
                  <img src="images/boiledmeat.jpg" width="200px" height="100px" alt="">

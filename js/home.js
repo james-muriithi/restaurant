@@ -7,51 +7,48 @@ const closebtn = () => {
     document.getElementById("ingredientcard").style.display = "none";
 }
 const ordernow = (clikedids) =>{
-    document.getElementById("foorcatcard").style.display = "block";
-    // var clikedid = clicked_button;
-    document.getElementById("orderedItem").value = clikedids;
-    // alert(clikedids);
+    var items = clikedids;
+    var price = 0;
+    if(items == "chapati-meats"){
+        price = 650;
+        var itemset = localStorage.setItem("Item1",clikedids);
+        toastr.success(clikedids, "Added to cart");   
+    }else if(items == "boiled-meats"){
+        price = 450;
+        var itemset = localStorage.setItem("Item2",clikedids);
+            toastr.success(clikedids, "Added to cart");   
+    }else if(items == "chicken-boileds"){
+        price = 550;
+        var itemset = localStorage.setItem("Item3",clikedids);
+           toastr.success(clikedids, "Added to cart");    
+    }else if(items == "eggs-ugali"){
+        price = 220;
+        var itemset = localStorage.setItem("Item4",clikedids);
+            toastr.success(clikedids, "Added to cart");   
+    }else if(items == "fried-chicken"){
+        price = 730;
+        var itemset = localStorage.setItem("Item5",clikedids);
+           toastr.success(clikedids, "Added to cart");    
+    }else if(items == "kienyeji-mboga"){
+        price = 330;
+        var itemset = localStorage.setItem("Item6",clikedids);
+           toastr.success(clikedids, "Added to cart");    
+    }else if(items == "meat-wet-fry"){
+        price = 490;
+        var itemset = localStorage.setItem("Item7",clikedids);
+           toastr.success(clikedids, "Added to cart");    
+    }else{
+        price = 460;
+        var itemset = localStorage.setItem("Item8",clikedids);
+       toastr.success(clikedids, "Added to cart");
+    }
+    // document.getElementById("orderedItem").value = clikedids;
 }
 const closebtns = () => {
     document.getElementById("foorcatcard").style.display = "none";
 }
-const getorders = () =>{
-    var items = document.getElementById("orderedItem").value;
-    var Locations = document.getElementById("Locations").value.trim();
-    var phone = document.getElementById("phone").value.trim();
-    var Email = document.getElementById("Email").value.trim();
-    var quantity = parseInt(document.getElementById("Quantity").value.trim());
-    if(Locations == "" || phone == "" || Email == "" || quantity == "" || items == ""){
-        toastr.warning("Please fill all required fields");
-       return false;
-    }else{
-        var price = 0;
-        if(items == "chapati-meats"){
-            price = 650;
-        }else if(items == "boiled-meats"){
-            price = 450;
-        }else if(items == "chicken-boileds"){
-            price = 550;
-        }else if(items == "eggs-ugali"){
-            price = 220;
-        }else if(items == "fried-chicken"){
-            price = 730;
-        }else if(items == "kienyeji-mboga"){
-            price = 330;
-        }else if(items == "meat-wet-fry"){
-            price = 490;
-        }else{
-            price = 460;
-        }
-        toastr.success("TOTAL PRICE: " + parseInt(price * quantity + parseInt(200)));
-        var items = document.getElementById("orderedItem").value = "";
-        var Locations = document.getElementById("Locations").value = "";
-        var phone = document.getElementById("phone").value = "";
-        var Email = document.getElementById("Email").value = "";
-        var quantity = document.getElementById("Quantity").value = "";
-        return false;
-    }
-}
+// cart items
+    //    end of cart items
 const getnavlists = () =>{
     document.getElementById("navlists").style.display = "block";
 }
