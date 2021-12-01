@@ -1,7 +1,7 @@
-const getclickedId = (clicked_button) =>{
-    document.getElementById("ingredientcard").style.display = "block";
-    document.getElementById("ingedientheader").innerHTML = clicked_button;
-}
+// const getclickedId = (clicked_button) =>{
+//     document.getElementById("ingredientcard").style.display = "block";
+//     document.getElementById("ingedientheader").innerHTML = clicked_button;
+// }
 const closebtn = () => {
     document.getElementById("ingredientcard").style.display = "none";
 }
