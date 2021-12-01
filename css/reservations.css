@@ -25,7 +25,8 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-#footer {
+
+/* #footer {
     display: flex;
     justify-content: center;
 }
@@ -42,7 +43,7 @@ footer {
 #copyright {
     color: gray;
     font-size: 15px;
-}
+} */
 
 
 /* reservations styles */
@@ -52,6 +53,7 @@ html {
     height: 100%;
     overflow-x: hidden;
     --main: #FF3D00;
+    --footer-bg: #333333;
 }
 
 #reservations {
@@ -83,4 +85,32 @@ html {
 
 #reservations .invalid-feedback {
     color: #c4c4c4;
+}
+
+footer {
+    background: var(--footer-bg);
+}
+
+footer .logo {
+    /* height: 40px; */
+    max-width: 100px;
+}
+
+footer {
+    color: #fff;
+}
+
+footer .subscription a,
+footer .sitemap a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+footer .subscription a:hover,
+footer .sitemap a:hover {
+    text-decoration: underline;
+    color: #fff;
 }
