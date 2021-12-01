@@ -18,3 +18,7 @@
     border-top: 8px solid #ff7014;
     border-bottom: 8px solid #fd7014;
   }
+  .nav-link {
+    color: white;
+    margin-right: 120px;
+  }
