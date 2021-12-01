@@ -13,15 +13,35 @@ $(function() {
             const noOfPeople = $('#chairs').val();
             const fullName = $('#full_name').val();
             const email = $('#email').val();
-            let reserveDate = moment(new Date($('#date').val())).format("dddd, MMMM Do YYYY, HH:mm");
+            const phone = $('#phone').val();
+            const reservationDate = $('#date').val();
+
+            let reserveDate = moment(new Date(reservationDate)).format("dddd, MMMM Do YYYY, HH:mm");
 
             const message = `Your space has been reserved for ${noOfPeople} people on ${reserveDate}`;
-            toastr.success(message, 'Reservation Successful');
+
             const emailMessage = `Hello ${fullName},\r\nYour space has been reserved for ${noOfPeople} people on ${reserveDate}.\r\nThank your for dining with us.`
 
-            sendEmail(email, emailMessage);
+            // sendEmail(email, emailMessage);
 
-            $(this)[0].reset();
+            const reservationData = {
+                full_name: fullName,
+                email,
+                people: noOfPeople,
+                phone,
+                date: moment(reservationDate).format("Y-MM-DD HH:mm:ss")
+            }
+            showSubmitingStatus()
+
+            submitReservation(reservationData)
+                .then(() => {
+                    toastr.success(message, 'Reservation Successful');
+                    showSubmitingStatus(false);
+                })
+                .catch(() => {
+                    toastr.error("There was an error submitting your reservation", 'Ooops');
+                    showSubmitingStatus(false);
+                })
 
         }
 
@@ -51,6 +71,25 @@ function removeFormErrors(form) {
         if ($(this).hasClass("is-invalid")) {
             $(this).removeClass("is-invalid");
         }
+    })
+}
+
+function submitReservation(reservationData) {
+    const endpointUrl = "http://localhost:8000/api/v1/reservations/";
+
+    return fetch(endpointUrl, {
+        body: JSON.stringify(reservationData),
+        method: 'POST',
+        // mode: "no-cors",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+    }).then(res => {
+        if (res.ok) {
+            return res.body;
+        }
+        throw new Error("an error occured")
     })
 }
 
@@ -85,6 +124,12 @@ function sendSms() {
             },
         }).then(res => console.log(res))
         .catch(err => console.log(err))
+}
+
+
+function showSubmitingStatus(loading = true) {
+    let buttonText = loading ? "Booking..." : "Book";
+    $(".btn--primary").text(buttonText).prop('disabled', loading);
 }
 
 removeFormErrors($('.reservation-form'));
