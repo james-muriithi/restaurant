@@ -22,7 +22,7 @@ const getorders = () =>{
     var Email = document.getElementById("Email").value.trim();
     var quantity = parseInt(document.getElementById("Quantity").value.trim());
     if(Locations == "" || phone == "" || Email == "" || quantity == "" || items == ""){
-       alert("Please fill all required fields");
+        toastr.warning("Please fill all required fields");
        return false;
     }else{
         var price = 0;
@@ -43,7 +43,7 @@ const getorders = () =>{
         }else{
             price = 460;
         }
-        alert("TOTAL PRICE: " + parseInt(price * quantity + parseInt(200)));
+        toastr.success("TOTAL PRICE: " + parseInt(price * quantity + parseInt(200)));
         var items = document.getElementById("orderedItem").value = "";
         var Locations = document.getElementById("Locations").value = "";
         var phone = document.getElementById("phone").value = "";
