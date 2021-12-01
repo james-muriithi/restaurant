@@ -43,7 +43,7 @@ const getorders = () =>{
         }else{
             price = 460;
         }
-        alert("TOTAL PRICE: " + parseInt(price * quantity + parseInt(200)));
+        toastr.success("TOTAL PRICE: " + parseInt(price * quantity + parseInt(200)));
         var items = document.getElementById("orderedItem").value = "";
         var Locations = document.getElementById("Locations").value = "";
         var phone = document.getElementById("phone").value = "";
