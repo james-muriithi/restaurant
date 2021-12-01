@@ -25,14 +25,14 @@
   .link {
     width: 850px;
   }
-  .overlay1,
-.overlay2,
-.overlay3 {
-  background-color: #ff7014;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
+    .overlay1,
+    .overlay2,
+    .overlay3 {
+    background-color: #ff7014;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    }
 img {
     height: 30px;
     width: 30px;
