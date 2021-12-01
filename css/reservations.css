@@ -1,0 +1,86 @@
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 10px;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer i {
+    font-size: 30px;
+    color: #000;
+}
+
+footer {
+    text-align: center;
+}
+
+#copyright {
+    color: gray;
+    font-size: 15px;
+}
+
+
+/* reservations styles */
+
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+    --main: #FF3D00;
+}
+
+#reservations {
+    height: 100%;
+    background: url('../images/reservation-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-transluscent {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#reservations input {
+    background: #c4c4c4;
+}
+
+#reservations input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.btn--primary {
+    background: var(--main);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#reservations .invalid-feedback {
+    color: #c4c4c4;
+}
