@@ -33,8 +33,14 @@ nav ul li a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
 input[type=text],input[type=email], textarea{
-    background-color: gainsboro;
+    background-color: rgb(182, 178, 178);
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -46,7 +52,7 @@ input[type=text],input[type=email], textarea{
 }
 
 input[type=submit]{
-    background-color: gainsboro;
+    background-color: rgb(182, 178, 178);
     box-sizing: border-box;
     padding: 10px;
     border: none;
@@ -54,6 +60,10 @@ input[type=submit]{
     margin-top: 5px;
     margin-bottom: 15px;
     cursor: pointer;
+}
+form{
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 
