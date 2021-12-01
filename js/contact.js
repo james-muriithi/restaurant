@@ -9,7 +9,7 @@ $(document).ready(function(){
                 return false;
     } else{
         alert('Thank you ' + name + ' for contacting Buddies Restaurant. Your message has been received')
-return true;
+            return true;
     }
     });
 });
