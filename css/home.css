@@ -60,7 +60,7 @@ nav ul li a:hover{
 }
 #menuItems{
     /* text-align: center; */
-    padding: 40px 30px 40px 30px;
+    padding: 40px 30px 40px 100px;
 }
 .cardss{
     background-color: orangered;
@@ -163,6 +163,10 @@ form{
 #menuhumbuger{
     margin-right: 40px;
 }
+#allcarts{
+    padding: 3px;
+    border-radius: 50%;
+}
 @media only screen and (max-width: 420px){
     #navlists{
         display: none;
@@ -175,5 +179,12 @@ form{
     }
     #menuhumbuger{
         display: block;
+    }
+    #menuItems{
+        margin: auto;
+    }
+    .welcometext{
+        width: 100%;
+        margin: auto;
     }
 }
