@@ -32,3 +32,23 @@ nav ul li a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+
+#footer{
+    display: flex;
+   justify-content: center;
+}
+#footer i{
+    font-size: 30px;
+    color: #000;
+}
+footer{
+    height: 100px;
+    text-align: center;
+}
+#copyright{
+    color: gray;
+    font-size: 15px;
+}
