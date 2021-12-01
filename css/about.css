@@ -38,3 +38,11 @@ img {
     width: 30px;
     border-radius: 15px;
   }
+  .col-12 li {
+    list-style: none;
+  }
+  .footer {
+    color: white;
+  }
+  
+
