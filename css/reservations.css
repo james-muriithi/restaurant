@@ -6,6 +6,11 @@ nav {
     top: 0;
     z-index: 1;
     width: 100%;
+    display: flex;
+}
+
+nav .logo {
+    max-width: 100px;
 }
 
 nav ul li {
@@ -25,7 +30,8 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-#footer {
+
+/* #footer {
     display: flex;
     justify-content: center;
 }
@@ -42,6 +48,19 @@ footer {
 #copyright {
     color: gray;
     font-size: 15px;
+} */
+
+.navbar-toggler:focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #e6e6e6;
 }
 
 
@@ -52,14 +71,23 @@ html {
     height: 100%;
     overflow-x: hidden;
     --main: #FF3D00;
+    --footer-bg: #333333;
 }
 
 #reservations {
     height: 100%;
+    min-height: 100%;
     background: url('../images/reservation-bg.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    #reservations {
+        height: 120% !important;
+    }
 }
 
 .bg-transluscent {
@@ -84,3 +112,36 @@ html {
 #reservations .invalid-feedback {
     color: #c4c4c4;
 }
+
+
+/* new footer styles */
+
+footer {
+    background: var(--footer-bg);
+}
+
+footer .logo {
+    max-width: 100px;
+}
+
+footer {
+    color: #fff;
+}
+
+footer .subscription a,
+footer .sitemap a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+footer .subscription a:hover,
+footer .sitemap a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+/* end of footer styles */
