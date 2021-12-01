@@ -1,32 +1,174 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant</title>
-
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- custom css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
 </head>
-
 <body>
-
-
-
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- custom js -->
-    <script src="./js/app.js"></script>
-
+    <div class="welcome">
+        <nav>
+            <div class="images">
+                <img src="images/menu.png" width="30px" height="30px" onclick="getnavlists()" id="menuhumbuger">
+            </div>
+            <ul id="navlists">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+            </ul>
+        </nav>
+        <div class="welcometext">
+            <p>
+                <span id="bigwelcome">Welcome to RJEM Restaurant.</span> 
+                <br>
+                <i>Where taste meet the myth. Mellow is a State of mind, a culture,  <br>
+                    a way of being. Our mission is to provide delicious food in a fun <br> and creative environment.
+                     We are the originators of hand prepared deliceous meals. <br>
+                    let your mouth taste: <span id="deliceous"></span>
+                    </i>
+            </p>
+        </div>
+         <div class="container" id="buttonmenu">
+            <a href="#menuItems"><button class="btn" id="menubtn">Menu</button></a>
+         </div>
+    </div>
+    <div class="container" id="menuItems">
+         <i><h2>Menu</h2></i>
+         <div class="rows">
+             <div class="card">
+                 <img src="images/boiledmeat.jpg" width="200px" height="100px" alt="">
+                 <section>
+                    <h6><span id="names">Boiled Meat</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">450 Kshs</span> <span id="boiled-meats"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                 </section>
+                 <button id="boiledmeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+             </div>
+             <div class="card">
+                <img src="images/chapatimeat.jpg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Chapati & Meat</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">650 Kshs</span> <span id="chapati-meats"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="chapatimeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
+                <img src="images/chickenboiled.jpg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Boiled Chicken</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">550 Kshs</span> <span id="chicken-boileds"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="chickenboiled" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
+                <img src="images/eggsugali.jpg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Eggs & Ugali</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">220 Kshs</span> <span id="eggs-ugali"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="eggsugali" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
+                <img src="images/friedchicken.jpg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Fried Chicken</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">730 Kshs</span> <span id="fried-chicken"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="friedchicken" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
+                <img src="images/kienyejimboga.jpeg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Kienyeji</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">330 Kshs</span> <span id="kienyeji-mboga"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="kienyejimboga" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
+                <img src="images/meatwetfry.jpg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Meat (Wet Fry)</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">490 Kshs</span> <span id="meat-wet-fry"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="meatwetfry" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
+                <img src="images/roastedmeat.jpg" width="200px" height="100px" alt="">
+                <section>
+                   <h6><span id="names">Meat (Roasted)</span></h6>
+                   <br>
+                   <span class="flexprice"><span id="prices">460 Kshs</span> <span id="roasted-meat"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="roastedmeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+         </div>
+    </div>
+    <div class="ingredientcard" id="foorcatcard">
+        <img src="images/cancel.png" width="30px" onclick="closebtns()" id="closeimg" height="30px" alt="">
+        <p><h1><i>Order Food</i></h1></p>
+        <div class="card">
+            <p>Order:- <span id="foodorder"></span></p>
+            <form action="#" method="post">
+                <label for="phone">Item
+                    <br>
+                    <input type="text" class="form-control" name="orderedItem" width="100%" id="orderedItem" placeholder="ordered Item..."     >
+                </label>
+                <br>
+                <label for="phone">Phone
+                    <br>
+                    <input type="tel" class="form-control" name="phone" width="100%" id="phone" placeholder="Enter Phone..."     >
+                </label>
+                <br>
+                <label for="Email">Email
+                    <br>
+                    <input type="email" class="form-control" name="Email" width="100%" id="Email" placeholder="Enter Email..."     >
+                </label>
+                <br>
+                <label for="Quantity">Quantity
+                    <br>
+                    <input type="number" class="form-control" name="Quantity" width="100%" id="Quantity" placeholder="Quantity" min="1" max="10"     >
+                </label>
+                <br>
+                <label for="Locations">Locations(Places within Nairobi delivery 200Kshs)
+                    <br>
+                    <input type="text" class="form-control" name="Locations" width="100%" id="Locations" placeholder="Enter location"     >
+                </label>
+                <br>
+                <br>
+                <input type="submit" value="Order Now" class="btn btn-primary" width="100%" onclick="return getorders()">
+            </form>
+        </div>
+    </div>
+    <div class="ingredientcard" id="ingredientcard">
+        <img src="images/cancel.png" width="30px" onclick="closebtn()" id="closeimg" height="30px" alt="">
+        <p><h1><i>Ingredients</i></h1></p>
+        <div class="card">
+            <p>Ingredients for:- <span id="ingedientheader"></span></p>
+        </div>
+    </div>
+    <footer>
+        <div class="container" id="footer">
+            <a href="#"><img src="images/facebook.png" width="30px" height="30px" alt=""></a>
+            <a href="#"><img src="images/twitter.png" width="30px" height="30px" alt=""></a>
+            <a href="#"><img src="images/instagram.png" width="30px" height="30px" alt=""></a>
+            <a href="#"><img src="images/linkedln.png" width="30px" height="30px" alt=""></a>
+        </div>
+          <p id="copyright">&copy; RJEM Restaurant 2021</p>
+    </footer>
 </body>
-
 </html>
