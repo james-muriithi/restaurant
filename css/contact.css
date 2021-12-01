@@ -22,18 +22,24 @@ nav ul li a:hover{
 }
 
 #overlay{
+    background-color: rgba(0,0,0,0.8);
     position: relative;
     text-align: center;
-    color: orangered;
+    color: white;
 }
 .centered-text{
+    background-color: rgba(0,0,0,0.2);
+    border-top: 10px solid orangered;
+    border-bottom: 10px solid orangered;
     font-size: 30px;
+    font-weight: 800;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 #form{
+    margin-left: auto;
     border-radius: 5px;
     background-color: gainsboro;
     padding: 20px;
