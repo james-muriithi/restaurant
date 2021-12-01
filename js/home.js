@@ -12,35 +12,43 @@ const ordernow = (clikedids) =>{
     if(items == "chapati-meats"){
         price = 650;
         var itemset = localStorage.setItem("Item1",clikedids);
-        toastr.success(clikedids, "Added to cart");   
+        toastr.success(clikedids, "Added to cart");  
+        window.location.reload(); 
     }else if(items == "boiled-meats"){
         price = 450;
         var itemset = localStorage.setItem("Item2",clikedids);
-            toastr.success(clikedids, "Added to cart");   
+            toastr.success(clikedids, "Added to cart");
+            window.location.reload();   
     }else if(items == "chicken-boileds"){
         price = 550;
         var itemset = localStorage.setItem("Item3",clikedids);
-           toastr.success(clikedids, "Added to cart");    
+           toastr.success(clikedids, "Added to cart"); 
+           window.location.reload();   
     }else if(items == "eggs-ugali"){
         price = 220;
         var itemset = localStorage.setItem("Item4",clikedids);
-            toastr.success(clikedids, "Added to cart");   
+            toastr.success(clikedids, "Added to cart");  
+            window.location.reload(); 
     }else if(items == "fried-chicken"){
         price = 730;
         var itemset = localStorage.setItem("Item5",clikedids);
-           toastr.success(clikedids, "Added to cart");    
+           toastr.success(clikedids, "Added to cart");  
+           window.location.reload();  
     }else if(items == "kienyeji-mboga"){
         price = 330;
         var itemset = localStorage.setItem("Item6",clikedids);
-           toastr.success(clikedids, "Added to cart");    
+           toastr.success(clikedids, "Added to cart"); 
+           window.location.reload();   
     }else if(items == "meat-wet-fry"){
         price = 490;
         var itemset = localStorage.setItem("Item7",clikedids);
-           toastr.success(clikedids, "Added to cart");    
+           toastr.success(clikedids, "Added to cart");  
+           window.location.reload();  
     }else{
         price = 460;
         var itemset = localStorage.setItem("Item8",clikedids);
        toastr.success(clikedids, "Added to cart");
+       window.location.reload();
     }
     // document.getElementById("orderedItem").value = clikedids;
 }
