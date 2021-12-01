@@ -1,0 +1,11 @@
+.nav-bg {
+    background-image: url(../images/prepbg1.jpeg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    position: relative;
+  }
