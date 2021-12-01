@@ -19,18 +19,28 @@
 </head>
 
 <body>
-    <nav>
-        <ul class="mb-0">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <li><a href="reserve.html">Reserve</a></li>
-        </ul>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navabar-brand">
+                <img src="./images/logo.png" alt="Buddies Restaurant" class="img-fluid logo">
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="mb-0 ms-auto navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reserve.html">Reserve</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div id="reservations">
         <div class="container-fluid h-100">
-            <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-sm-9 col-lg-7 col-xl-6 p-4 bg-transluscent rounded shadow text-white">
+            <div class="row h-100 justify-content-center align-items-center pt-5 pt-md-0">
+                <div class="col-sm-9 col-lg-7 col-xl-6 p-4 bg-transluscent rounded shadow text-white mt-5 mb-md-0">
                     <h4 class="text-center h5">Reserve your space</h4>
                     <form class="reservation-form pt-5">
                         <div class="form-group">
