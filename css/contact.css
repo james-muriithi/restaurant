@@ -1,0 +1,87 @@
+nav{
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+nav ul li{
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 25px;
+    font-weight: 400;
+}
+nav ul li a:hover{
+    color: #FFFFFF;
+}
+
+#overlay{
+    position: relative;
+    text-align: center;
+    color: orangered;
+}
+.centered-text{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+input[type=text],input[type=email], textarea{
+    background-color: rgb(182, 178, 178);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+input[type=submit]{
+    background-color: rgb(182, 178, 178);
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+form{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+
+
+#footer{
+    display: flex;
+   justify-content: center;
+}
+#footer i{
+    font-size: 30px;
+    color: #000;
+}
+footer{
+    height: 100px;
+    text-align: center;
+}
+#copyright{
+    color: gray;
+    font-size: 15px;
+}
