@@ -1,13 +1,18 @@
 $(document).ready(function(){
-    $('#send').click(function(event){
-     event.preventDefault();
+    $('#send').click(function(e){
+     e.preventDefault();
     var name = $('#name').val();
-     var email = $('#email').val();
-     var message = $('#msg').val();
-     if (!name || !email || !message){
-         alert("Please ensure you have filled all entries in the form")
-     } else{
-         alert('Thank you for contacting Buddies Restaurant. Your message has been received')
-     }
-     });
+    var email = $('#email').val();
+    var message = $('#msg').val();
+    if (!name || !email || !message){
+        toastr.error('Please ensure you have filled all entries in the form', 'Error!');
+            return false;
+    } else{
+        toastr.success('Thank you ' + name + ' for contacting Buddies Restaurant. Your message has been received', 'Success!')
+            return true;
+    }
+    });
 });
+
+
+
