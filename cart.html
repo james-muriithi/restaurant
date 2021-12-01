@@ -49,7 +49,7 @@
             //  inputQuantities.setAttribute("onchange","getQuantities()");
              inputQuantities.setAttribute("placeholder","Enter Quantity(min 1 max 12)");
              inputQuantities.setAttribute("class","form-control");
-             inputQuantities.setAttribute("onchange","getItemsQuantity(this.id)");
+             inputQuantities.setAttribute("onkeyup","getItemsQuantity(this.id)");
             main.appendChild(lists);
             main.appendChild(inputQuantities);
         }
