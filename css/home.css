@@ -1,44 +1,63 @@
 body{
     overflow-x:hidden;
 }
-.welcome{
-    background-image: url(../images/homebg.jpg);
-    background-size: cover;
-    padding: 0;
-    margin: -8px;
-    height: 550px;
-}
-nav{
-    background-color: rgba(0,0,0,0.5);
-    padding: 10px;
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 10px;
     text-align: right;
     position: sticky;
     top: 0;
     z-index: 3;
+    width: 100%;
+    display: flex;
 }
-nav ul li{
+nav .logo {
+    max-width: 100px;
+}
+#welcomes{
+    position: relative;
+}
+.main-navmenu{
+    background-image: url(../images/homebg.jpg);
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+}
+.new-textwelcome{
+    padding: 100px 0px 0px 100px;
+}
+.welcometext{
+    width: 50%;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+nav ul li {
     list-style: none;
     display: inline;
     padding-right: 30px;
 }
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: gainsboro;
-    font-size: 25px;
+    font-size: 19px;
     font-weight: 400;
 }
-nav ul li a:hover{
+nav ul li a:hover {
     color: #FFFFFF;
 }
-.welcometext{
-    background-color: rgba(0,0,0,0.5);
-    color: #FFFFFF;
-    margin-top: 100px;
-    margin-left: 100px;
-    width: max-content;
-    padding: 10px;
-    border-radius: 15px;
+.navbar-toggler:focus,
+.btn:focus {
+    box-shadow: none;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #E6E6E6;
+}
+
 .welcometext p #bigwelcome{
     font-size: 2.3rem;
 }
@@ -109,22 +128,7 @@ nav ul li a:hover{
     box-shadow: 0 4px 2px -2px gray;
 
 }
-#footer{
-    display: flex;
-   justify-content: center;
-}
-#footer i{
-    font-size: 30px;
-    color: #000;
-}
-footer{
-    height: 100px;
-    text-align: center;
-}
-#copyright{
-    color: gray;
-    font-size: 15px;
-}
+
 .ingredientcard{
     background-color: rgba(0,0,0,0.7);
     color: #FFFFFF;
@@ -159,32 +163,43 @@ footer{
 }
 form{
     padding: 10px;
+    margin-top: 100px;
 }
 #menuhumbuger{
     margin-right: 40px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
 }
 #allcarts{
     padding: 3px;
     border-radius: 50%;
 }
-@media only screen and (max-width: 420px){
-    #navlists{
-        display: none;
-    }
-    nav ul li{
-        list-style: block;
-    }
-    nav ul li a{
-        font-size: 17px;
-    }
-    #menuhumbuger{
-        display: block;
-    }
-    #menuItems{
-        margin: auto;
+footer{
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+footer a{
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#closehumber{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+@media only screen and(max-width: 720px){
+    .new-textwelcome{
+        padding: 100px 0px 0px 20px;
     }
     .welcometext{
         width: 100%;
-        margin: auto;
+        color: #FFFFFF;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 10px;
     }
 }

@@ -18,32 +18,43 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="welcome">
-        <nav>
-            <div class="images">
-                <img src="images/menu.png" width="30px" height="30px" onclick="getnavlists()" id="menuhumbuger">
-            </div>
-            <ul id="navlists">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="reservations.html">Reserve</a></li>
-            </ul>
-        </nav>
-        <div class="welcometext">
-            <p>
-                <span id="bigwelcome">Welcome to RJEM Restaurant.</span> 
-                <br>
-                <i>Where taste meet the myth. Mellow is a State of mind, a culture,  <br>
-                    a way of being. Our mission is to provide delicious food in a fun <br> and creative environment.
-                     We are the originators of hand prepared deliceous meals. <br>
-                    let your mouth taste: <span id="deliceous"></span>
-                    </i>
-            </p>
+        <div class="main-navmenu">
+            <div id="welcomes">
+                <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+                    <div class="container-fluid">
+                        <a href="index.html" class="navabar-brand">
+                        <img src="./images/logo.png" alt="Buddies Restaurant" class="img-fluid logo">
+                        </a>
+                        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-white"></span>
+                        </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="mb-0 ms-auto navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="reserve.html">Reserve</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </nav>
+                <div class="new-textwelcome">
+                    <div class="welcometext">
+                        <p>
+                            <span id="bigwelcome">Welcome to Buddies Restaurant.</span> 
+                            <br>
+                            <i>Where taste meet the myth. Mellow is a State of mind, a culture,  <br>
+                                a way of being. Our mission is to provide delicious food in a fun <br> and creative environment.
+                                We are the originators of hand prepared deliceous meals. <br>
+                                let your mouth taste: <span id="deliceous"></span>
+                                </i>
+                        </p>
+                    </div>
+                    <div class="container" id="buttonmenu">
+                        <a href="#menuItems"><button class="btn" id="menubtn">Menu</button></a>
+                    </div>
+                </div>
         </div>
-         <div class="container" id="buttonmenu">
-            <a href="#menuItems"><button class="btn" id="menubtn">Menu</button></a>
-         </div>
     </div>
     <div class="container" id="menuItems">
          <i><h2>Menu</h2></i>
@@ -174,7 +185,6 @@
     </div>
     <div class="ingredientcard" id="ingredientcard">
         <img src="images/cancel.png" width="30px" onclick="closebtn()" id="closeimg" height="30px" alt="">
-        <p><h1><i>Ingredients</i></h1></p>
         <div class="card">
             <p>Ingredients for:- <span id="ingedientheader"></span></p>
             <script src="js/ingredients.js"></script>
@@ -183,14 +193,61 @@
             </ul>
         </div>
     </div>
-    <footer>
+    <!-- footer -->
+    <footer class="pt-4">
         <div class="container" id="footer">
-            <a href="#"><img src="images/facebook.png" width="30px" height="30px" alt=""></a>
-            <a href="#"><img src="images/twitter.png" width="30px" height="30px" alt=""></a>
-            <a href="#"><img src="images/instagram.png" width="30px" height="30px" alt=""></a>
-            <a href="#"><img src="images/linkedln.png" width="30px" height="30px" alt=""></a>
+            <div class="upper-part pb-4 border-bottom">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start  mb-4 mb-md-0">
+                        <a href="index.html" class="navabar-brand">
+                            <img src="./images/logo.png" alt="Buddies Restaurant" width="100px" height="auto" class="img-fluid logo">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 sitemap">
+                        <div class="sitemaps">
+                            <h4 class="fw-bold h5">Sitemap</h4>
+                            <a href="index.html">Home</a>
+                            <br>
+                            <a href="#menu">Menu</a>
+                            <br>
+                            <a href="contact.html">Contact Us</a>
+                            <br>
+                            <a href="about.html">About Us</a>
+                            <br>
+                            <a href="reserve.html">Reserve</a>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 subscription d-flex justify-content-start justify-content-md-center">
+                        <div class="">
+                            <h4 class="fw-bold h5">Contact</h4>
+                            <a href="mailto:contact@buddies.com" class="pb-1">contact@buddies.com</a>
+                            <a href="tel:+254712345678" class="pb-1">+254712345678</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-part py-3">
+                <div class="row">
+                    <div class="col-6 col-md-4 offset-md-4 text-md-start">
+                        <small>© 2021 Reserved</small>
+                    </div>
+                    <div class="col-6 col-md-4 text-end">
+                        <div class="socials d-flex justify-content-end">
+                            <a href="#" class="px-1">
+                                <img src="./images/fb.png" alt="Facebook" height="30">
+                            </a>
+                            <a href="#" class="px-1">
+                                <img src="./images/twit.png" alt="Facebook" height="30">
+                            </a>
+                            <a href="#" class="px-1">
+                                <img src="./images/ig.png" alt="Facebook" height="30">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-          <p id="copyright">&copy; RJEM Restaurant 2021</p>
     </footer>
 </body>
 </html>
