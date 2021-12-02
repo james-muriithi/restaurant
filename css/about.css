@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
 .nav-bg {
     background-image: url(../images/prepbg1.jpeg);
     height: 50vh;
@@ -28,12 +32,12 @@
     .overlay1,
     .overlay2,
     .overlay3 {
-    background-color: #ff7014;
+        background-color: rgba(255, 255, 255, 0.445);
     height: 100%;
     width: 100%;
     position: absolute;
     }
-img {
+.border-white img {
     height: 30px;
     width: 30px;
     border-radius: 15px;
@@ -44,5 +48,14 @@ img {
   .footer {
     color: white;
   }
-  
-
+  .navbar-toggler{
+      background-color: #fd7014;
+  }
+   .card img{
+      height: 200px
+  }
+  @media only screen and (min-width: 576px){ 
+      .col-md-8{ 
+          margin-bottom: 50 !important;
+      }
+  }
