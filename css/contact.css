@@ -43,7 +43,7 @@ nav ul li a:hover {
 }
 
 #overlay{
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.2);
     position: relative;
     text-align: center;
     color: white;
@@ -58,6 +58,16 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+iframe{
+    padding-left: 100px;
+}
+@media screen and (max-width: 380px){
+    iframe{
+        padding-left: 0;
+        width:350px;
+        height: 300px;
+    }
 }
 #form{
     margin-left: auto;
@@ -84,7 +94,7 @@ input[type=submit]{
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 15px;
-    width: 65%;
+    width: 45%;
     cursor: pointer;
 }
 ::placeholder{
