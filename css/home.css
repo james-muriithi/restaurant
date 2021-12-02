@@ -191,15 +191,23 @@ footer a{
     top: 10px;
     right: 30px;
 }
-@media only screen and(max-width: 720px){
+@media screen and (max-width: 720px) {
+ 
+    #welcometexts{
+        width: auto;
+        margin-left: 10px;
+        padding-left: 20px;
+        margin-right: 20px;
+    }
+    #bigwelcome{
+        font-size: 19px;
+        font-weight:normal ;
+    }
     .new-textwelcome{
-        padding: 100px 0px 0px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .welcometext{
-        width: 100%;
-        color: #FFFFFF;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        border-radius: 10px;
+    .main-navmenu{
+      height: 700px;
     }
-}
+  }
