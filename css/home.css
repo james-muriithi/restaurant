@@ -85,6 +85,7 @@ nav ul li a:hover {
     background-color: orangered;
     padding: 5px;
     border-radius: 3px;
+    cursor: pointer;
 }
 #menuItems .card{
     width: 200px;

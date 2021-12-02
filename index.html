@@ -1,31 +1,30 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/home.js"></script>
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" 
-    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" 
-    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
 </head>
+
 <body>
-        <div class="main-navmenu">
-            <div id="welcomes">
-                <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
-                    <div class="container-fluid">
-                        <a href="index.html" class="navabar-brand">
+    <div class="main-navmenu">
+        <div id="welcomes">
+            <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+                <div class="container-fluid">
+                    <a href="index.html" class="navabar-brand">
                         <img src="./images/logo.png" alt="Buddies Restaurant" class="img-fluid logo">
-                        </a>
-                        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    </a>
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"></span>
                         </button>
                     <div class="collapse navbar-collapse" id="navbarText">
@@ -36,30 +35,30 @@
                             <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve</a></li>
                         </ul>
                     </div>
-                    </div>
-                </nav>
-                <div class="new-textwelcome">
-                    <div class="welcometext" id="welcometexts">
-                        <p>
-                            <span id="bigwelcome">Welcome to Buddies Restaurant.</span> 
-                            <br>
-                            <i>Where taste meet the myth. Mellow is a State of mind, a culture,  <br>
+                </div>
+            </nav>
+            <div class="new-textwelcome">
+                <div class="welcometext" id="welcometexts">
+                    <p>
+                        <span id="bigwelcome">Welcome to Buddies Restaurant.</span>
+                        <br>
+                        <i>Where taste meet the myth. Mellow is a State of mind, a culture,  <br>
                                 a way of being. Our mission is to provide delicious food in a fun <br> and creative environment.
                                 We are the originators of hand prepared deliceous meals. <br>
                                 let your mouth taste: <span id="deliceous"></span>
                                 </i>
-                        </p>
-                    </div>
-                    <div class="container" id="buttonmenu">
-                        <a href="#menuItems"><button class="btn" id="menubtn">Menu</button></a>
-                    </div>
+                    </p>
                 </div>
+                <div class="container" id="buttonmenu">
+                    <a href="#menuItems"><button class="btn" id="menubtn">Menu</button></a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container" id="menuItems">
-         <i><h2>Menu</h2></i>
-         <a href="cart.html"><button class="btn btn-warning">See Cart <sup class="bg-danger text-light" id="allcarts">0</sup></button></a>
-         <script>
+        <i><h2>Menu</h2></i>
+        <a href="cart.html"><button class="btn btn-warning">See Cart <sup class="bg-danger text-light" id="allcarts">0</sup></button></a>
+        <script>
             var Items = [];
             Items[0] = localStorage.getItem("Item1");
             Items[1] = localStorage.getItem("Item2");
@@ -71,85 +70,87 @@
             Items[7] = localStorage.getItem("Item8");
             var NewItems = Items.filter((a) => a);
             document.getElementById("allcarts").innerHTML = NewItems.length;
-         </script>
-         <div class="rows">
-             <div class="card">
-                 <img src="images/boiledmeat.jpg" width="200px" height="100px" alt="">
-                 <section>
+        </script>
+        <div class="rows">
+            <div class="card">
+                <img src="images/boiledmeat.jpg" width="200px" height="100px" alt="">
+                <section>
                     <h6><span id="names">Boiled Meat</span></h6>
                     <br>
-                    <span class="flexprice"><span id="prices">450 Kshs</span> <span id="boiled-meats"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
-                 </section>
-                 <button id="boiledmeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
-             </div>
-             <div class="card">
+                    <span class="flexprice"><span id="prices">450 Kshs</span> <span id="boiled-meats" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                </section>
+                <button id="boiledmeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
+            </div>
+            <div class="card">
                 <img src="images/chapatimeat.jpg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Chapati & Meat</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">650 Kshs</span> <span id="chapati-meats"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Chapati & Meat</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">650 Kshs</span> <span id="chapati-meats" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="chapatimeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
             <div class="card">
                 <img src="images/chickenboiled.jpg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Boiled Chicken</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">550 Kshs</span> <span id="chicken-boileds"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Boiled Chicken</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">550 Kshs</span> <span id="chicken-boileds" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="chickenboiled" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
             <div class="card">
                 <img src="images/eggsugali.jpg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Eggs & Ugali</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">220 Kshs</span> <span id="eggs-ugali"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Eggs & Ugali</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">220 Kshs</span> <span id="eggs-ugali" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="eggsugali" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
             <div class="card">
                 <img src="images/friedchicken.jpg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Fried Chicken</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">730 Kshs</span> <span id="fried-chicken"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Fried Chicken</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">730 Kshs</span> <span id="fried-chicken" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="friedchicken" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
             <div class="card">
                 <img src="images/kienyejimboga.jpeg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Kienyeji</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">330 Kshs</span> <span id="kienyeji-mboga"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Kienyeji</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">330 Kshs</span> <span id="kienyeji-mboga" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="kienyejimboga" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
             <div class="card">
                 <img src="images/meatwetfry.jpg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Meat (Wet Fry)</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">490 Kshs</span> <span id="meat-wet-fry"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Meat (Wet Fry)</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">490 Kshs</span> <span id="meat-wet-fry" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="meatwetfry" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
             <div class="card">
                 <img src="images/roastedmeat.jpg" width="200px" height="100px" alt="">
                 <section>
-                   <h6><span id="names">Meat (Roasted)</span></h6>
-                   <br>
-                   <span class="flexprice"><span id="prices">460 Kshs</span> <span id="roasted-meat"   onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
+                    <h6><span id="names">Meat (Roasted)</span></h6>
+                    <br>
+                    <span class="flexprice"><span id="prices">460 Kshs</span> <span id="roasted-meat" onclick="ordernow(this.id)" class="cardss"><img src="images/cart.png" width="20px" height="20px" alt=""></span></span>
                 </section>
                 <button id="roastedmeat" onclick="getclickedId(this.id)"><i>Ingredients</i></button>
             </div>
-         </div>
+        </div>
     </div>
     <div class="ingredientcard" id="foorcatcard">
         <img src="images/cancel.png" width="30px" onclick="closebtns()" id="closeimg" height="30px" alt="">
-        <p><h1><i>Order Food</i></h1></p>
+        <p>
+            <h1><i>Order Food</i></h1>
+        </p>
         <div class="card">
             <p>Order:- <span id="foodorder"></span></p>
             <form action="#" method="post">
@@ -221,7 +222,7 @@
                     <div class="col-6 col-md-4 subscription d-flex justify-content-start justify-content-md-center">
                         <div class="">
                             <h4 class="fw-bold h5">Contact</h4>
-                            <a href="mailto:contact@buddies.com" class="pb-1">contact@buddies.com</a>
+                            <a href="mailto:contact@buddies.com" class="pb-1 d-block">contact@buddies.com</a>
                             <a href="tel:+254712345678" class="pb-1">+254712345678</a>
                         </div>
                     </div>
@@ -250,4 +251,5 @@
         </div>
     </footer>
 </body>
+
 </html>
