@@ -30,26 +30,6 @@ nav ul li a:hover {
     color: #FFFFFF;
 }
 
-
-/* #footer {
-    display: flex;
-    justify-content: center;
-}
-
-#footer i {
-    font-size: 30px;
-    color: #000;
-}
-
-footer {
-    text-align: center;
-}
-
-#copyright {
-    color: gray;
-    font-size: 15px;
-} */
-
 .navbar-toggler:focus,
 .btn:focus {
     box-shadow: none;
