@@ -107,11 +107,8 @@ nav ul li a:hover {
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #E6E6E6;
 }
-white_check_mark
-eyes
-raised_hands
-
-
-
-
-
+.overlay2,
+.overlay3,
+.overlay1{
+    display: none;
+}

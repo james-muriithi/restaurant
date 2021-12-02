@@ -8,6 +8,7 @@ $(document).ready(function(){
         toastr.error('Please ensure you have filled all entries in the form', 'Error!');
             return false;
     } else{
+        $("#myform")[0].reset();
         toastr.success('Thank you ' + name + ' for contacting Buddies Restaurant. Your message has been received', 'Success!')
             return true;
     }
