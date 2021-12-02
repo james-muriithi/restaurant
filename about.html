@@ -16,40 +16,24 @@
   <body>
     <section class="nav-bg">
       <!--nav bar-->
-      <nav class="navbar fixed-top navbar-expand-lg navbar-success bg-transparent">
-        <!-- <div class="container">
-          <div class=""> -->
-            <!--toggle btn for mobile-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          
-           <!--navbar links-->
-        <!-- <div class="container link"> -->
-            <div class="collapse navbar-collapse" id="main-nav">
-                <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-items">
-                  <a class="nav-link" href="#Home">Home</a>
-                </li>
-                <li class="nav-items active">
-                  <a class="nav-link" href="#About us">About</a>
-                </li>
-                <li class="nav-items">
-                  <a class="nav-link" href="#Reservations">Menu</a>
-                </li>
-                <li class="nav-items">
-                  <a class="nav-link" href="#Reservations">Contact</a>
-                </li>
-                <li class="nav-items">
-                  <a class="nav-link" href="#contacts">Reserve</a>
-                </li>
-              </ul>
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navabar-brand">
+                <img src="./images/logo (1).png" alt="Buddies Restaurant" class="img-fluid logo">
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="mb-0 ms-auto navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reserve.html">Reserve</a></li>
+                </ul>
             </div>
         </div>
-        </div>
-       
-      </nav>
+    </nav>
 
       <div class="text">
         <h1><strong>About Us</strong></h1>
@@ -124,44 +108,57 @@
         </div>
       </div>
     </section>
-        <footer class="footer bg-secondary">
-            <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 align-items-center">
-                <div><strong>LOGO</strong></div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-4">
-                <p>Sitemap</p>
-                <li id="#home">Home</li>
-                <li id="#about">About</li>
-                <li id="#menu">Menu</li>
-                <li id="#contact">Contact</li>
-                <li id="#reserve">Reserve</li>
-                </div>
-                <div class="col-12 col-md-4 col-lg-4">
-                <p>subscribe</p>
-                <form class="d-flex">
-                    <input
-                    class="form-control me-2"
-                    type="email"
-                    placeholder="E-mail"
-                    aria-label="Search"
-                    />
-                    <button class="btn btn-outline-secondary" type="submit"></button>
-                </form>
-                </div>
-            </div>
-            <div class="row border-top-5 border-white">
-                <div class="col-12 col-md-8 m-3 text-center">Buddies &copy; 2021 Reserved</div>
-                <div class="col-12 col-md-4">
-                <img src="./images/facebook.png" alt="facebook" />
-                <img src="./images/twitter.png" alt="twitter" />
-                <img src="./images/instagram.png" alt="instagram" />
-                <img src="./images/linkedln.png" alt="linkedin" />
+        <!-- footer -->
+    <footer class="pt-4">
+        <div class="container" id="footer">
+            <div class="upper-part pb-4 border-bottom">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start  mb-4 mb-md-0">
+                        <a href="index.html" class="navabar-brand">
+                            <img src="./images/logo.png" alt="Buddies Restaurant" class="img-fluid logo">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 sitemap">
+                        <div class="">
+                            <h4 class="fw-bold h5">Sitemap</h4>
+                            <a href="index.html">Home</a>
+                            <a href="#menu">Menu</a>
+                            <a href="contact.html">Contact Us</a>
+                            <a href="about.html">About Us</a>
+                            <a href="reserve.html">Reserve</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 subscription d-flex justify-content-start justify-content-md-center">
+                        <div class="">
+                            <h4 class="fw-bold h5">Contact</h4>
+                            <a href="mailto:contact@buddies.com" class="pb-1">contact@buddies.com</a>
+                            <a href="tel:+254712345678" class="pb-1">+254712345678</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="lower-part py-3">
+                <div class="row">
+                    <div class="col-6 col-md-4 offset-md-4 text-md-start">
+                        <small>© 2021 Reserved</small>
+                    </div>
+                    <div class="col-6 col-md-4 text-end">
+                        <div class="socials d-flex justify-content-end">
+                            <a href="#" class="px-1">
+                                <img src="./images/fb.png" alt="Facebook" height="30">
+                            </a>
+                            <a href="#" class="px-1">
+                                <img src="./images/twit.png" alt="Facebook" height="30">
+                            </a>
+                            <a href="#" class="px-1">
+                                <img src="./images/ig.png" alt="Facebook" height="30">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
         <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/about.js"></script>
     

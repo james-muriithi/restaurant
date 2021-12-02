@@ -19,8 +19,8 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    border-top: 8px solid #ff7014;
-    border-bottom: 8px solid #fd7014;
+    border-top: 8px solid orangered;
+    border-bottom: 8px solid orangered;
   }
   .nav-link {
     color: white;
@@ -48,14 +48,77 @@
   .footer {
     color: white;
   }
-  .navbar-toggler{
-      background-color: #fd7014;
-  }
+  
    .card img{
       height: 200px
   }
-  @media only screen and (min-width: 576px){ 
-      .col-md-8{ 
-          margin-bottom: 50 !important;
-      }
-  }
+
+  footer {
+    background: var(--footer-bg);
+}
+footer .logo {
+    max-width: 100px;
+}
+footer {
+    color: #fff;
+}
+footer .subscription a,
+footer .sitemap a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+footer .subscription a:hover,
+footer .sitemap a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+footer{background:#333333}
+ 
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 10px;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+}
+nav .logo {
+    max-width: 100px;
+}
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 19px;
+    font-weight: 400;
+}
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+.navbar-toggler:focus,
+.btn:focus {
+    box-shadow: none;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #E6E6E6;
+}
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+
