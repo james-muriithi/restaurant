@@ -145,7 +145,6 @@
         mainButton.appendChild(btns);
         const getItemsQuantity = (checkedids) =>{
            var  itemss = document.getElementById(checkedids).value;
-            toastr.success(itemss);
             if(checkedids == "Items0"){
                localStorage.setItem("quan0", itemss);
             }else if(checkedids == "Items1"){
@@ -185,14 +184,14 @@
               
             var itemsPrice = [];
             var sum1 = 0;
-            itemsPrice[0] = parseInt(localStorage.getItem("ItemPrice0"));
-            itemsPrice[1] = parseInt(localStorage.getItem("ItemPrice1"));
-            itemsPrice[2] = parseInt(localStorage.getItem("ItemPrice2"));
-            itemsPrice[3] = parseInt(localStorage.getItem("ItemPrice3"));
-            itemsPrice[4] = parseInt(localStorage.getItem("ItemPrice4"));
-            itemsPrice[5] = parseInt(localStorage.getItem("ItemPrice5"));
-            itemsPrice[6] = parseInt(localStorage.getItem("ItemPrice6"));
-            itemsPrice[7] = parseInt(localStorage.getItem("ItemPrice7"));
+            itemsPrice[0] = parseInt(localStorage.getItem("ItemPrice1"));
+            itemsPrice[1] = parseInt(localStorage.getItem("ItemPrice2"));
+            itemsPrice[2] = parseInt(localStorage.getItem("ItemPrice3"));
+            itemsPrice[3] = parseInt(localStorage.getItem("ItemPrice4"));
+            itemsPrice[4] = parseInt(localStorage.getItem("ItemPrice5"));
+            itemsPrice[5] = parseInt(localStorage.getItem("ItemPrice6"));
+            itemsPrice[6] = parseInt(localStorage.getItem("ItemPrice7"));
+            itemsPrice[7] = parseInt(localStorage.getItem("ItemPrice8"));
             var allItemPrice = itemsPrice.filter((d) => d);
               allItemPrice.forEach(sums => {
                   sum1 += sums;
@@ -210,9 +209,8 @@
                       newTotal.forEach(alltotal => {
                         totalsum +=  alltotal;
                       });
-            toastr.success("Total Price:" + totalsum + " "+"Thank you for shopping with us");
-            localStorage.clear();
-            window.location.reload();
+            toastr.success("Total Price:" + (totalsum + 200)+ " "+"Thank you for shopping with us");
+            // window.location.reload();
               return false;
             }
       </script>
