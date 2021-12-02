@@ -15,14 +15,98 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/cartcss.css">
+    <!-- <script src="js/cart.js"></script> -->
     <title>Document</title>
 </head>
 <body>
-    <div class="trial" id="listings1">
-        <form action="#" method="POST" class="form" id="listings">
-
-        </form>
-    </div>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navabar-brand">
+            <img src="./images/logo.png" alt="Buddies Restaurant" width="100px" height="auto" class="img-fluid logo">
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="mb-0 ms-auto navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+        <div class="container" id="cartrformcontainer">
+            <form action="#" method="POST" class="form" id="listings"></form>
+            <div class="trial" id="listings1">
+                <div class="allitems" id="removable">
+                    <ul id="deleteItems"></ul>
+                    <script>
+                        var AllItems = [];
+                        AllItems[0] = localStorage.getItem("Item1");
+                        AllItems[1] = localStorage.getItem("Item2");
+                        AllItems[2] = localStorage.getItem("Item3");
+                        AllItems[3] = localStorage.getItem("Item4");
+                        AllItems[4] = localStorage.getItem("Item5");
+                        AllItems[5] = localStorage.getItem("Item6");
+                        AllItems[6] = localStorage.getItem("Item7");
+                        AllItems[7] = localStorage.getItem("Item8");
+                        var NewItems = AllItems.filter((v) => v);
+                         for(var q = 0; q < NewItems.length; q++){
+                             var itmen = document.createElement("LI");
+                             itmen.innerHTML = NewItems[q];
+                             var buttondelete = document.createElement("INPUT");
+                             buttondelete.setAttribute("type","submit");
+                             buttondelete.setAttribute("id",NewItems[q]);
+                             buttondelete.setAttribute("class","deletebutton");
+                             buttondelete.setAttribute("onclick","deleteItems(this.id)");
+                             buttondelete.setAttribute("value","Delete");
+                             buttondelete.setAttribute("class","btn btn-danger");
+                             document.getElementById("deleteItems").appendChild(itmen);
+                             itmen.appendChild(buttondelete);
+                         }
+                         const deleteItems = (dleteid) =>{
+                            var str = dleteid;
+                            var newStr = str.replace(/-/g, "");
+                             if(newStr == "boiledmeats"){
+                                localStorage.removeItem("Item2");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else if(newStr == "chickenboileds"){
+                                localStorage.removeItem("Item3");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else if(newStr == "chapatimeats"){
+                                localStorage.removeItem("Item1");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else if(newStr == "eggsugali"){
+                                localStorage.removeItem("Item4");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else if(newStr == "friedchicken"){
+                                localStorage.removeItem("Item5");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else if(newStr == "kienyejimboga"){
+                                localStorage.removeItem("Item6");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else if(newStr == "meatwetfry"){
+                                localStorage.removeItem("Item7");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }else{
+                                localStorage.removeItem("Item8");
+                                 toastr.success("Removed"+ " " + newStr);
+                                window.location.reload(); 
+                             }
+                         }
+                    </script>
+                </div> 
+           </div>
+        </div>
     <script>
         var Items = [];
         Items[0] = localStorage.getItem("Item1");
@@ -61,7 +145,6 @@
         mainButton.appendChild(btns);
         const getItemsQuantity = (checkedids) =>{
            var  itemss = document.getElementById(checkedids).value;
-            toastr.success(itemss);
             if(checkedids == "Items0"){
                localStorage.setItem("quan0", itemss);
             }else if(checkedids == "Items1"){
@@ -101,14 +184,14 @@
               
             var itemsPrice = [];
             var sum1 = 0;
-            itemsPrice[0] = parseInt(localStorage.getItem("ItemPrice0"));
-            itemsPrice[1] = parseInt(localStorage.getItem("ItemPrice1"));
-            itemsPrice[2] = parseInt(localStorage.getItem("ItemPrice2"));
-            itemsPrice[3] = parseInt(localStorage.getItem("ItemPrice3"));
-            itemsPrice[4] = parseInt(localStorage.getItem("ItemPrice4"));
-            itemsPrice[5] = parseInt(localStorage.getItem("ItemPrice5"));
-            itemsPrice[6] = parseInt(localStorage.getItem("ItemPrice6"));
-            itemsPrice[7] = parseInt(localStorage.getItem("ItemPrice7"));
+            itemsPrice[0] = parseInt(localStorage.getItem("ItemPrice1"));
+            itemsPrice[1] = parseInt(localStorage.getItem("ItemPrice2"));
+            itemsPrice[2] = parseInt(localStorage.getItem("ItemPrice3"));
+            itemsPrice[3] = parseInt(localStorage.getItem("ItemPrice4"));
+            itemsPrice[4] = parseInt(localStorage.getItem("ItemPrice5"));
+            itemsPrice[5] = parseInt(localStorage.getItem("ItemPrice6"));
+            itemsPrice[6] = parseInt(localStorage.getItem("ItemPrice7"));
+            itemsPrice[7] = parseInt(localStorage.getItem("ItemPrice8"));
             var allItemPrice = itemsPrice.filter((d) => d);
               allItemPrice.forEach(sums => {
                   sum1 += sums;
@@ -126,7 +209,8 @@
                       newTotal.forEach(alltotal => {
                         totalsum +=  alltotal;
                       });
-            toastr.success("Total Price:" + totalsum + " "+"Thank you for shopping with us");
+            toastr.success("Total Price:" + (totalsum + 200)+ " "+"Thank you for shopping with us");
+            // window.location.reload();
               return false;
             }
       </script>
