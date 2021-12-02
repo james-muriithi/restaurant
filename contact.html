@@ -15,26 +15,35 @@
 </head>
 <body>
     <!--header  -->
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="reserve.html">Reserve</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container" id="overlay">
-        <img src="images/spencer-davis-5dsZnCVDHd0-unsplash 1.png" alt="">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.png" alt="Buddies Restaurant" class="img-fluid logo">
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="mb-0 ms-auto navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reserve.html">Reserve</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="overlay">
+        <img class="img-fluid" src="images/spencer-davis-5dsZnCVDHd0-unsplash 1.png" alt="">
         <div class="centered-text"><h1>Contact Us</h1></div>
     </div>
     <!-- form -->
-    <div class="container mt-2" id="form">
+    <div class="container-fluid mt-2" id="form">
         <div class="row mt-4">
             <div class=col-md-6>
-                <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790610041559!2d36.782418015287064!3d-1.300486199051474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sMoringa%20School!5e0!3m2!1sen!2ske!4v1638371340436!5m2!1sen!2ske" 
-                width="600" height="450" style="border:1px solid rgb(235, 230, 230); border-radius: 10px;" allowfullscreen="" loading="lazy" alt="location map"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790610041559!2d36.782418015287064!3d-1.300486199051474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sMoringa%20School!5e0!3m2!1sen!2ske!4v1638428064590!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <!-- <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790610041559!2d36.782418015287064!3d-1.300486199051474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sMoringa%20School!5e0!3m2!1sen!2ske!4v1638371340436!5m2!1sen!2ske"  -->
+                <!-- width="600" height="450" style="border:1px solid rgb(235, 230, 230); border-radius: 10px;" allowfullscreen="" loading="lazy" alt="location map"></iframe> -->
             </div>
             <div class="col-md-6">
                 <form action="" method="" name="mc-embedded-subscribe-form" id="myform">
@@ -54,7 +63,58 @@
     </div>
     <br>
     <!-- footer -->
-    <div class="container" id footer>
+    <footer class="pt-4">
+        <div class="container" id="footer">
+            <div class="upper-part pb-4 border-bottom">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start  mb-4 mb-md-0">
+                        <a href="index.html" class="navabar-brand">
+                            <img src="./images/logo.png" alt="Buddies Restaurant" class="img-fluid logo">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 sitemap">
+                        <div class="">
+                            <h4 class="fw-bold h5">Sitemap</h4>
+                            <a href="index.html">Home</a>
+                            <a href="#menu">Menu</a>
+                            <a href="contact.html">Contact Us</a>
+                            <a href="about.html">About Us</a>
+                            <a href="reserve.html">Reserve</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 subscription d-flex justify-content-start justify-content-md-center">
+                        <div class="">
+                            <h4 class="fw-bold h5">Contact</h4>
+                            <a href="mailto:contact@buddies.com" class="pb-1">contact@buddies.com</a>
+                            <a href="tel:+254712345678" class="pb-1">+254712345678</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lower-part py-3">
+                <div class="row">
+                    <div class="col-6 col-md-3 offset-md-3 text-md-end">
+                        <small>© 2021 Reserved</small>
+                    </div>
+                    <div class="col-6 col-md-3 text-end">
+                        <div class="socials d-flex justify-content-end">
+                            <a href="#" class="px-1">
+                                <img src="images/fb.png" alt="Facebook" height="30">
+                            </a>
+                            <a href="#" class="px-1">
+                                <img src="images/twit.png" alt="Twitter" height="30">
+                            </a>
+                            <a href="#" class="px-1">
+                                <img src="images/ig.png" alt="Instagram" height="30">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <div class="container" id footer>
         <footer>
             <a href="#"><img src="images/facebook.png" width="30px" height="30px" alt=""></a>
             <a href="#"><img src="images/twitter.png" width="30px" height="30px" alt=""></a>
@@ -62,6 +122,6 @@
             <a href="#"><img src="images/linkedln.png" width="30px" height="30px" alt=""></a>
             <p id="copyright">&copy; Buddies Restaurant 2021</p>           
         </footer>
-    </div>
+    </div> -->
 </body>
 </html>
