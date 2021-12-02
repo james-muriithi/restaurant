@@ -1,0 +1,190 @@
+body{
+    overflow-x:hidden;
+}
+.welcome{
+    background-image: url(../images/homebg.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: -8px;
+    height: 550px;
+}
+nav{
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+nav ul li{
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 25px;
+    font-weight: 400;
+}
+nav ul li a:hover{
+    color: #FFFFFF;
+}
+.welcometext{
+    background-color: rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: max-content;
+    padding: 10px;
+    border-radius: 15px;
+}
+.welcometext p #bigwelcome{
+    font-size: 2.3rem;
+}
+#deliceous{
+    color: orangered;
+    font-weight: bold;
+}
+#menubtn{
+    background-color: orangered;
+    color: #FFFFFF;
+    width: 150px !important;
+    height: 50px !important;
+    font-weight: bold;
+    border-radius: 25px;
+}
+#buttonmenu{
+    text-align: center;
+    margin-top: 50px;
+}
+#menuItems{
+    /* text-align: center; */
+    padding: 40px 30px 40px 100px;
+}
+.cardss{
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 3px;
+}
+#menuItems .card{
+    width: 200px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+.flexprice{
+    display: flex;
+    justify-content: space-between;
+}
+.card p{
+    padding: 5px;
+}
+.card button{
+    border: 1px solid gainsboro;
+    margin: 10px 5px 2px 5px;
+    background-color: inherit;
+}
+.card button:hover{
+    background-color: gainsboro;
+}
+.card img{
+    border-radius: 5px 5px 0px 0px;
+}
+.card section{
+    padding: 5px;
+}
+.rows{
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+#menuItems i{
+    text-align: center;
+}
+#names{
+    color: gray;
+}
+.rows .card:hover{
+    box-shadow: 0 4px 2px -2px gray;
+
+}
+#footer{
+    display: flex;
+   justify-content: center;
+}
+#footer i{
+    font-size: 30px;
+    color: #000;
+}
+footer{
+    height: 100px;
+    text-align: center;
+}
+#copyright{
+    color: gray;
+    font-size: 15px;
+}
+.ingredientcard{
+    background-color: rgba(0,0,0,0.7);
+    color: #FFFFFF;
+    position: absolute;
+    width: 80%;
+    height: 570px;
+    top: 640px;
+    margin-left: 100px;
+}
+.ingredientcard p{
+    text-align: center;
+}
+.ingredientcard .card{
+    width: 400px;
+    height: auto;
+    min-height: 200px;
+    background-color: #FFFFFF;
+    margin: auto;
+    color: black;
+}
+#closeimg{
+    transform: translate(-10px, -10px);
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+#menuhumbuger{
+    display: none;
+}
+#ingredientcard,#foorcatcard{
+    display: none;
+}
+form{
+    padding: 10px;
+}
+#menuhumbuger{
+    margin-right: 40px;
+}
+#allcarts{
+    padding: 3px;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 420px){
+    #navlists{
+        display: none;
+    }
+    nav ul li{
+        list-style: block;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+    #menuhumbuger{
+        display: block;
+    }
+    #menuItems{
+        margin: auto;
+    }
+    .welcometext{
+        width: 100%;
+        margin: auto;
+    }
+}

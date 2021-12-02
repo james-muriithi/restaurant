@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/contact.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <!--header  -->
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container" id="overlay">
+        <img src="images/spencer-davis-5dsZnCVDHd0-unsplash 1.png" alt="">
+        <div class="centered-text"><h1>Contact Us</h1></div>
+    </div>
+    <!-- form -->
+    <div class="container mt-2" id="form">
+        <div class="row mt-4">
+            <div class=col-md-6>
+                <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790610041559!2d36.782418015287064!3d-1.300486199051474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sMoringa%20School!5e0!3m2!1sen!2ske!4v1638371340436!5m2!1sen!2ske" 
+                width="600" height="450" style="border:1px solid rgb(235, 230, 230); border-radius: 10px;" allowfullscreen="" loading="lazy" alt="location map"></iframe>
+            </div>
+            <div class="col-md-6">
+                <form action="" method="" name="mc-embedded-subscribe-form" id="myform">
+                    <label for="">Name</label><br>
+                    <input type="text" name="NAME" id="name" placeholder="Name..." style="width: 400px; height: 30px;"><br>
+
+                    <label for="">Email</label><br>
+                    <input type="email" name="EMAIL" id="email" placeholder="username@domain.com" style="width: 400px; height: 30px;" required><br>
+
+                    <label for="">Message</label><br>
+                    <textarea name="MMERGE2" id="msg" cols="30" rows="10" placeholder="Tell us something here..." style="height: 200px; width: 400px;"></textarea><br>
+
+                    <input type="submit" id="send" value="Submit" style="color: white;">
+                </form>
+            </div>
+        </div>      
+    </div>
+    <br>
+    <!-- footer -->
+    <div class="container" id footer>
+        <footer>
+            <a href="#"><img src="images/facebook.png" width="30px" height="30px" alt=""></a>
+            <a href="#"><img src="images/twitter.png" width="30px" height="30px" alt=""></a>
+            <a href="#"><img src="images/instagram.png" width="30px" height="30px" alt=""></a>
+            <a href="#"><img src="images/linkedln.png" width="30px" height="30px" alt=""></a>
+            <p id="copyright">&copy; Buddies Restaurant 2021</p>           
+        </footer>
+    </div>
+</body>
+</html>

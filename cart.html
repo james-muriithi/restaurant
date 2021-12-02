@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="js/home.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" 
+    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" 
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/cartcss.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="trial" id="listings1">
+        <h3>Cart Fom</h3>
+        <form action="#" method="POST" class="form" id="listings">
+
+        </form>
+    </div>
+    <script>
+        var Items = [];
+        Items[0] = localStorage.getItem("Item1");
+        Items[1] = localStorage.getItem("Item2");
+        Items[2] = localStorage.getItem("Item3");
+        Items[3] = localStorage.getItem("Item4");
+        Items[4] = localStorage.getItem("Item5");
+        Items[5] = localStorage.getItem("Item6");
+        Items[6] = localStorage.getItem("Item7");
+        Items[7] = localStorage.getItem("Item8");
+        var NewItems = Items.filter((a) => a);
+        var i = 0
+        for(i=0;i < NewItems.length; i++){
+            var main = document.getElementById("listings");
+            var lists = document.createElement("LABEL");
+            lists.innerHTML = NewItems[i];
+             var inputQuantities = document.createElement("INPUT");
+             inputQuantities.setAttribute("id",("Items" + i));
+             inputQuantities.setAttribute("type","number");
+             inputQuantities.setAttribute("max","12");
+             inputQuantities.setAttribute("min","1");
+             inputQuantities.setAttribute("required","required");
+            //  inputQuantities.setAttribute("onchange","getQuantities()");
+             inputQuantities.setAttribute("placeholder","Enter Quantity(min 1 max 12)");
+             inputQuantities.setAttribute("class","form-control");
+             inputQuantities.setAttribute("onkeyup","getItemsQuantity(this.id)");
+            main.appendChild(lists);
+            main.appendChild(inputQuantities);
+        }
+        var mainButton = document.getElementById("listings");
+        var btns = document.createElement("INPUT");
+        btns.setAttribute("type", "submit");
+        btns.setAttribute("class", "btn btn-primary");
+        btns.setAttribute("Value", "Check Out");
+        btns.setAttribute("onclick", "return validatequantities()");
+        mainButton.appendChild(btns);
+        const getItemsQuantity = (checkedids) =>{
+           var  itemss = document.getElementById(checkedids).value;
+            toastr.success(itemss);
+            if(checkedids == "Items0"){
+               localStorage.setItem("quan0", itemss);
+            }else if(checkedids == "Items1"){
+                localStorage.setItem("quan1", itemss);
+            }else if(checkedids == "Items2"){
+                localStorage.setItem("quan2", itemss);
+            }else if(checkedids == "Items3"){
+                localStorage.setItem("quan3", itemss);
+            }else if(checkedids == "Items4"){
+                localStorage.setItem("quan4", itemss);
+            }else if(checkedids == "Items5"){
+                localStorage.setItem("quan5", itemss);
+            }else if(checkedids == "Items6"){
+                localStorage.setItem("quan6", itemss);
+            }else{
+                localStorage.setItem("quan7", itemss);
+            }
+        }
+        
+      </script>
+      <script>
+            function validatequantities(){
+                var sumall = 0;
+            var itemQuantities = [];
+            itemQuantities[0] = parseInt(localStorage.getItem("quan0"));
+            itemQuantities[1] = parseInt(localStorage.getItem("quan1"));
+            itemQuantities[2] = parseInt(localStorage.getItem("quan2"));
+            itemQuantities[3] = parseInt(localStorage.getItem("quan3"));
+            itemQuantities[4] = parseInt(localStorage.getItem("quan4"));
+            itemQuantities[5] = parseInt(localStorage.getItem("quan5"));
+            itemQuantities[6] = parseInt(localStorage.getItem("quan6"));
+            itemQuantities[7] = parseInt(localStorage.getItem("quan7"));
+            var NewQuantity = itemQuantities.filter((a) => a);
+            NewQuantity.forEach(newsum => {
+                  sumall += newsum;
+              });
+              
+            var itemsPrice = [];
+            var sum1 = 0;
+            itemsPrice[0] = parseInt(localStorage.getItem("ItemPrice0"));
+            itemsPrice[1] = parseInt(localStorage.getItem("ItemPrice1"));
+            itemsPrice[2] = parseInt(localStorage.getItem("ItemPrice2"));
+            itemsPrice[3] = parseInt(localStorage.getItem("ItemPrice3"));
+            itemsPrice[4] = parseInt(localStorage.getItem("ItemPrice4"));
+            itemsPrice[5] = parseInt(localStorage.getItem("ItemPrice5"));
+            itemsPrice[6] = parseInt(localStorage.getItem("ItemPrice6"));
+            itemsPrice[7] = parseInt(localStorage.getItem("ItemPrice7"));
+            var allItemPrice = itemsPrice.filter((d) => d);
+              allItemPrice.forEach(sums => {
+                  sum1 += sums;
+              });
+              var totalsum = 0;
+              var totallarray = [itemQuantities[0] * itemsPrice[0],
+                                itemQuantities[1] * itemsPrice[1],
+                                itemQuantities[2] * itemsPrice[2],
+                                itemQuantities[3] * itemsPrice[3],
+                                itemQuantities[4] * itemsPrice[4],
+                                itemQuantities[5] * itemsPrice[5],
+                                itemQuantities[6] * itemsPrice[6],
+                                itemQuantities[7] * itemsPrice[7]];
+                      var newTotal = totallarray.filter((c) => c);
+                      newTotal.forEach(alltotal => {
+                        totalsum +=  alltotal;
+                      });
+            toastr.success("Total Price:" + totalsum + " "+"Thank you for shopping with us");
+              return false;
+            }
+      </script>
+</body>
+</html>
