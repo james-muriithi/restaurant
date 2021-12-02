@@ -48,14 +48,32 @@
   .footer {
     color: white;
   }
-  .navbar-toggler{
-      background-color: #fd7014;
-  }
+  
    .card img{
       height: 200px
   }
-  @media only screen and (min-width: 576px){ 
-      .col-md-8{ 
-          margin-bottom: 50 !important;
-      }
-  }
+
+  footer {
+    background: var(--footer-bg);
+}
+footer .logo {
+    max-width: 100px;
+}
+footer {
+    color: #fff;
+}
+footer .subscription a,
+footer .sitemap a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+footer .subscription a:hover,
+footer .sitemap a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+footer{background:#333333}
+  
