@@ -19,8 +19,8 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    border-top: 8px solid #ff7014;
-    border-bottom: 8px solid #fd7014;
+    border-top: 8px solid orangered;
+    border-bottom: 8px solid orangered;
   }
   .nav-link {
     color: white;
