@@ -22,13 +22,6 @@
     border-top: 8px solid orangered;
     border-bottom: 8px solid orangered;
   }
-  .nav-link {
-    color: white;
-    margin-right: 120px;
-  }
-  .link {
-    width: 850px;
-  }
     .overlay1,
     .overlay2,
     .overlay3 {
@@ -90,11 +83,11 @@ nav {
 nav .logo {
     max-width: 100px;
 }
-/* nav ul li {
+nav ul li {
     list-style: none;
     display: inline;
     padding-right: 30px;
-} */
+}
 nav ul li a {
     text-decoration: none;
     color: gainsboro;
