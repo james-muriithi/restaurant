@@ -66,6 +66,13 @@ const closebtns = () => {
     //    end of cart items
 const getnavlists = () =>{
     document.getElementById("navlists").style.display = "block";
+    document.getElementById("menuhumbuger").style.display = "none";
+    document.getElementById("closehumber").style.display = "block";
+}
+const closenavlists = () =>{
+    document.getElementById("navlists").style.display = "none";
+    document.getElementById("menuhumbuger").style.display = "block";
+    document.getElementById("closehumber").style.display = "none";
 }
 var deliceous = ["mouth-watering", "appetizing", "tasty", "flavoursome", "flavourful", "delectable", "toothsome", "inviting"];
     var i = 0;
