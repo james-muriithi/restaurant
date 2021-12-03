@@ -1,0 +1,214 @@
+body{
+    overflow-x:hidden;
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 10px;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+}
+nav .logo {
+    max-width: 100px;
+}
+#welcomes{
+    position: relative;
+}
+.main-navmenu{
+    background-image: url(../images/homebg.jpg);
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+}
+.new-textwelcome{
+    padding: 100px 0px 0px 100px;
+}
+.welcometext{
+    width: 50%;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 19px;
+    font-weight: 400;
+}
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+.navbar-toggler:focus,
+.btn:focus {
+    box-shadow: none;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #E6E6E6;
+}
+
+.welcometext p #bigwelcome{
+    font-size: 2.3rem;
+}
+#deliceous{
+    color: orangered;
+    font-weight: bold;
+}
+#menubtn{
+    background-color: orangered;
+    color: #FFFFFF;
+    width: 150px !important;
+    height: 50px !important;
+    font-weight: bold;
+    border-radius: 25px;
+}
+#buttonmenu{
+    text-align: center;
+    margin-top: 50px;
+}
+#menuItems{
+    /* text-align: center; */
+    padding: 40px 30px 40px 100px;
+}
+.cardss{
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#menuItems .card{
+    width: 200px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+.flexprice{
+    display: flex;
+    justify-content: space-between;
+}
+.card p{
+    padding: 5px;
+}
+.card button{
+    border: 1px solid gainsboro;
+    margin: 10px 5px 2px 5px;
+    background-color: inherit;
+}
+.card button:hover{
+    background-color: gainsboro;
+}
+.card img{
+    border-radius: 5px 5px 0px 0px;
+}
+.card section{
+    padding: 5px;
+}
+.rows{
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+#menuItems i{
+    text-align: center;
+}
+#names{
+    color: gray;
+}
+.rows .card:hover{
+    box-shadow: 0 4px 2px -2px gray;
+
+}
+
+.ingredientcard{
+    background-color: rgba(0,0,0,0.7);
+    color: #FFFFFF;
+    position: absolute;
+    width: 80%;
+    height: 570px;
+    top: 640px;
+    margin-left: 100px;
+}
+.ingredientcard p{
+    text-align: center;
+}
+.ingredientcard .card{
+    width: 400px;
+    height: auto;
+    min-height: 200px;
+    background-color: #FFFFFF;
+    margin: auto;
+    color: black;
+}
+#closeimg{
+    transform: translate(-10px, -10px);
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+#menuhumbuger{
+    display: none;
+}
+#ingredientcard,#foorcatcard{
+    display: none;
+}
+form{
+    padding: 10px;
+    margin-top: 100px;
+}
+#menuhumbuger{
+    margin-right: 40px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+#allcarts{
+    padding: 3px;
+    border-radius: 50%;
+}
+footer{
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+footer a{
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#closehumber{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+@media screen and (max-width: 720px) {
+ 
+    #welcometexts{
+        width: auto;
+        margin-left: 10px;
+        padding-left: 20px;
+        margin-right: 20px;
+    }
+    #bigwelcome{
+        font-size: 19px;
+        font-weight:normal ;
+    }
+    .new-textwelcome{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .main-navmenu{
+      height: 700px;
+    }
+  }

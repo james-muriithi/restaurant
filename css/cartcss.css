@@ -1,0 +1,68 @@
+body{
+    background-image: url(../images/formbg.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+nav{
+    background-color: rgba(0,0,0,0.5) ;
+}
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 19px;
+    font-weight: 400;
+}
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+.navbar-toggler:focus,
+.btn:focus {
+    box-shadow: none;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #E6E6E6;
+}
+form{
+    background-color: rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    padding: 20px;
+}
+input[type=number]{
+    background-color: #C4C4C4 !important;
+    border: none;
+}
+input[type=submit]{
+    margin-top: 20px;
+    background-color: orangered !important;
+    color: #FFFFFF !important;
+    width: 100%;
+}
+#cartrformcontainer{
+    margin-top: 100px;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+#deleteItems .btn{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#listings1{
+    background-color: #FFFFFF;
+    position: absolute;
+    /* top: 400px;
+    left: 100px;
+    right: 100px; */
+}
+#listings1 input[type=submit]{
+    width: 100px;
+}
+ul li{
+    list-style: none;
+}
